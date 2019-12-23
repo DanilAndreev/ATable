@@ -24,9 +24,6 @@
     <ClCompile Include="Keyable.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Main.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="Namable.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
@@ -49,6 +46,9 @@
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="TableObject.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Example.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>

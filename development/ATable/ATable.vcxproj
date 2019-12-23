@@ -25,7 +25,7 @@
     <ClCompile Include="ConstColumn.cpp" />
     <ClCompile Include="IdColumn.cpp" />
     <ClCompile Include="Keyable.cpp" />
-    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Example.cpp" />
     <ClCompile Include="Namable.cpp" />
     <ClCompile Include="NamedColumn.cpp" />
     <ClCompile Include="TableObject.cpp" />
