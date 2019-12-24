@@ -44,9 +44,9 @@ namespace ATable {
 		void editCell(string column_key, size_t cell_id, Cell* cell); // edit cell cell in column with key column_key and row position cell_id
 		void editCell(size_t column_id, size_t cell_id, Cell* cell); // edit cell cell in column with key column_key and row position cell_id
 		virtual void print(ostream& stream); // prints table to stream stream
-	private:
 		Column* getColumn(int id); // returns column on position id
 		Column* getColumn(string key); // returns column with key key
+	private:
 		int getColumnId(string key); // returns id of column with key key
 		void drawLine(ostream & stream, char left_corner, char horizontal_line, char center_separator, char right_corner); // draws line to stream
 		void drawRow(ostream & stream, unsigned int row, char vertical_line); // draws row of values to stream
