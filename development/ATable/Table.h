@@ -19,7 +19,7 @@
 	  misrepresented as being the original source code.
    3. This notice may not be removed or altered from any source distribution.
    Andrieiev Danil danssg08@gmail.com
-   version 1.0.1
+   version 1.0.2
 */
 #include "TableObject.h"
 #include "SimpleColumn.h"
@@ -41,6 +41,8 @@ namespace ATable {
 		void addColumn(Column* column); // adds column column to table
 		void addCell(int column_id, Cell* cell); // adds cell cell to column with id column
 		void addCell(string column_key, Cell* cell); // adds cell cell to column with key column_key
+		void editCell(string column_key, size_t cell_id, Cell* cell); // edit cell cell in column with key column_key and row position cell_id
+		void editCell(size_t column_id, size_t cell_id, Cell* cell); // edit cell cell in column with key column_key and row position cell_id
 		virtual void print(ostream& stream); // prints table to stream stream
 	private:
 		Column* getColumn(int id); // returns column on position id

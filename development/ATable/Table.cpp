@@ -18,7 +18,7 @@
 	  misrepresented as being the original source code.
    3. This notice may not be removed or altered from any source distribution.
    Andrieiev Danil danssg08@gmail.com
-   version 1.0.1
+   version 1.0.2
 */
 #include "Table.h"
 
@@ -62,6 +62,25 @@ namespace ATable {
 			throw KeyNotExistException();
 		}
 		this->addCell(id, cell);
+	}
+
+	void Table::editCell(string column_key, size_t cell_id, Cell* cell) {
+		int id = this->getColumnId(column_key);
+		if (id == -1) {
+			throw KeyNotExistException();
+		}
+		this->editCell(id, cell_id, cell);
+	}
+
+	void Table::editCell(size_t column_id, size_t cell_id, Cell* cell) {
+		try {
+			SimpleColumn* scolumn = dynamic_cast<SimpleColumn*>(this->getColumn(column_id));
+			if (scolumn) {
+				scolumn->editCell(cell_id, cell);
+			}
+		}
+		catch (WrongIDException e) {
+		}
 	}
 
 

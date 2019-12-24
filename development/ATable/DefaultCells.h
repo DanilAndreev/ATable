@@ -19,9 +19,10 @@
 	  misrepresented as being the original source code.
    3. This notice may not be removed or altered from any source distribution.
    Andrieiev Danil danssg08@gmail.com
-   version 1.0.1
+   version 1.0.2
 */
 #include "Cell.h"
+#include <cmath>
 
 namespace ATable {
 	class StringCell : public Cell {

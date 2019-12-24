@@ -19,7 +19,7 @@
 	  misrepresented as being the original source code.
    3. This notice may not be removed or altered from any source distribution.
    Andrieiev Danil danssg08@gmail.com
-   version 1.0.1
+   version 1.0.2
 */
 #include "Cell.h"
 #include "NamedColumn.h"
@@ -35,6 +35,7 @@ namespace ATable {
 		SimpleColumn(string name, unsigned int width, string key);
 		~SimpleColumn();
 		void addCell(Cell* cell); // adds cell cell to column
+		void editCell(size_t row_id, Cell* cell); // edits cell cell to column
 		Cell* getCell(int id); // returns cell on position id
 		Cell* getCellClone(int id); // returns new instance of cell on position id
 		unsigned int getHeight(); // returns height of column (number of cells inside)

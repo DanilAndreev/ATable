@@ -18,7 +18,7 @@
 	  misrepresented as being the original source code.
    3. This notice may not be removed or altered from any source distribution.
    Andrieiev Danil danssg08@gmail.com
-   version 1.0.1
+   version 1.0.2
 */
 #include <iostream>
 #include "ATable.h"
@@ -36,6 +36,7 @@ int main() {
 
 	table->addCell("type", new ATable::StringCell("String cell example")); // adding to column with key: "type" a new string cell with text: "String cell example"
 	table->addCell("fields", new ATable::StringCell("Hello darkness my old friend")); // adding to column with key: "fields" a new string cell with text: "Hello darkness my old friend"
+	table->editCell("fields", 0, new ATable::StringCell("Hello darkness my new friend")); // adding to column with key: "fields" a new string cell with text: "Hello darkness my old friend"
 
 	table->addCell(1, new ATable::StringCell("Integer cell example")); // adding to column with id: 0 a new string cell with text: "Integer cell example"
 	table->addCell(3, new ATable::IntegerCell(228)); // adding to column with id: 2 a new integer cell with value: 228

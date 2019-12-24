@@ -18,7 +18,7 @@
 	  misrepresented as being the original source code.
    3. This notice may not be removed or altered from any source distribution.
    Andrieiev Danil danssg08@gmail.com
-   version 1.0.1
+   version 1.0.2
 */
 #include "SimpleColumn.h"
 
@@ -41,6 +41,17 @@ namespace ATable {
 	void SimpleColumn::addCell(Cell* cell) {
 		cell->setWidth(this->width);
 		this->cells->push_back(cell);
+	}
+
+	void SimpleColumn::editCell(size_t row_id, Cell* cell) {
+		cell->setWidth(this->width);
+		try {
+			delete this->cells->at(row_id);
+			this->cells->at(row_id) = cell;
+		}
+		catch (out_of_range e) {
+			throw WrongIDException();
+		}
 	}
 
 
